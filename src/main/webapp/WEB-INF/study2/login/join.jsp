@@ -5,6 +5,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>join.jsp</title>
   <jsp:include page="/include/bs4.jsp" />
   <style>
@@ -25,11 +26,11 @@
   </script>
 </head>
 <body>
-<jsp:include page="/include/header.jsp"></jsp:include>
+<jsp:include page="/include/header.jsp" />
 <p><br/></p>
 <div class="container">
-  <h2>회원가입222</h2>
-  <form name="myform" method="post" action="${ctp}/database/JoinOk.re">
+  <h2>회원가입2</h2>
+  <form name="myform" method="post" action="${ctp}/JoinOk.re">
   	<table class="table text-center">
   	  <tr>
   	    <th>아이디</th>
@@ -55,6 +56,6 @@
   </form>
 </div>
 <p><br/></p>
-<jsp:include page="/include/footer.jsp"></jsp:include>
+<jsp:include page="/include/footer.jsp" />
 </body>
 </html>

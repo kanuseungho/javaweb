@@ -7,6 +7,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>memberMain.jsp</title>
   <jsp:include page="/include/bs4.jsp" />
   <script>
@@ -28,7 +29,7 @@
   </script>
 </head>
 <body>
-<jsp:include page="/include/header.jsp"></jsp:include>
+<jsp:include page="/include/header.jsp" />
 <p><br/></p>
 <div class="container text-center">
   <h2>회원 전용방</h2>
@@ -37,20 +38,20 @@
   <hr/>
   <p>보유 포인트 : ${sPoint} / 최종 접속인 ${fn:substring(sLastDate,0,16)} / 오늘 접속횟수 : ${sTodayCount}회</p>
   <hr/>
-  <c:set var="ramdom"><%=(int)(Math.random()*6)+1%></c:set>
-  <p><img src="${ctp}/images/${ramdom}.jpg" width="300px"/></p>
+  <c:set var="random"><%=(int)(Math.random()*6)+1%></c:set>
+  <p><img src="${ctp}/images/${random}.jpg" width="300px"/></p>
   <hr/>
   <div class="row">
     <div class="col"></div>
     <div class="col"><button type="button" onclick="searchCehck()" class="btn btn-primary">개별조회</button></div>
-    <div class="col"><a href="${ctp}/database/List.re" class="btn btn-success">전체조회</a></div>
-    <div class="col"><a href="${ctp}/database/Logout.re" class="btn btn-danger">로그아웃</a></div>
+    <div class="col"><a href="${ctp}/List.re" class="btn btn-success">전체조회</a></div>
+    <div class="col"><a href="${ctp}/Logout.re" class="btn btn-danger">로그아웃</a></div>
     <div class="col"></div>
   </div>
   <hr/>
   <div id="demo"></div>
 </div>
 <p><br/></p>
-<jsp:include page="/include/footer.jsp"></jsp:include>
+<jsp:include page="/include/footer.jsp" />
 </body>
 </html>

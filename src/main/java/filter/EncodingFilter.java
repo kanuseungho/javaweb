@@ -8,23 +8,24 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
+
 @WebFilter("/*")
-public class EncodingFilter implements Filter{
+public class EncodingFilter implements Filter {
 
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-		// request.setCharacterEncoding("utf-8");
-		// response.setContentType("text/html; charset=utf-8");
 		
-		//System.out.println("1이곳은 필터 통과 전입니다");
+		// System.out.println("1.이곳은 Filter통과하기 전입니다.");
+		
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html; charset=utf-8");
 		
 		chain.doFilter(request, response);
 		
-	//	System.out.println("2이곳은 필터 통과 후입니다");
+		
+		// System.out.println("2.이곳은 Filter통과한 후입니다.");
 		
 	}
-	
+
 }

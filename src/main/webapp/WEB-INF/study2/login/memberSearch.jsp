@@ -6,6 +6,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>memberSearch.jsp</title>
   <jsp:include page="/include/bs4.jsp" />
   <style>
@@ -24,7 +25,7 @@
   </script>
 </head>
 <body>
-<jsp:include page="/include/header.jsp"></jsp:include>
+<jsp:include page="/include/header.jsp" />
 <p><br/></p>
 <div class="container">
   <h2>개별 회원 조회</h2>
@@ -62,13 +63,13 @@
   <p>
     <a href="${ctp}/MemberMain.re" class="btn btn-success mr-3">돌아가기</a>
     <c:if test="${vo.mid == sMid}">
-	    <a href="${ctp}/database/Update.re" class="btn btn-success mr-3">정보수정</a>
+	    <a href="${ctp}/Update.re" class="btn btn-success mr-3">정보수정</a>
 	    <a href="javascript:deleteCheck()" class="btn btn-success mr-3">회원탈퇴</a>
     </c:if>
   </p>
 </div>
 <p><br/></p>
-<jsp:include page="/include/footer.jsp"></jsp:include>
+<jsp:include page="/include/footer.jsp" />
 </body>
 </html>
 

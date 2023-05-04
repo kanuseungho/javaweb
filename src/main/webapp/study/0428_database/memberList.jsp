@@ -7,11 +7,12 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>memberList.jsp</title>
   <jsp:include page="/include/bs4.jsp" />
 </head>
 <body>
-<jsp:include page="/include/header.jsp"></jsp:include>
+<jsp:include page="/include/header.jsp" />
 <p><br/></p>
 <div class="container">
   <h2>전 체 회 원 리 스 트</h2>
@@ -48,6 +49,6 @@
   </div>
 </div>
 <p><br/></p>
-<jsp:include page="/include/footer.jsp"></jsp:include>
+<jsp:include page="/include/footer.jsp" />
 </body>
 </html>

@@ -6,6 +6,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>memberSearch.jsp</title>
   <jsp:include page="/include/bs4.jsp" />
   <style>
@@ -19,12 +20,12 @@
     
     function deleteCheck() {
     	let ans = confirm("정말 탈퇴하시겠습니까?");
-    	if(ans) location.href = "${ctp}/database/deleteOk"; 
+    	if(ans) location.href = "${ctp}/database/DeleteOk"; 
     }
   </script>
 </head>
 <body>
-<jsp:include page="/include/header.jsp"></jsp:include>
+<jsp:include page="/include/header.jsp" />
 <p><br/></p>
 <div class="container">
   <h2>개별 회원 조회</h2>
@@ -68,7 +69,7 @@
   </p>
 </div>
 <p><br/></p>
-<jsp:include page="/include/footer.jsp"></jsp:include>
+<jsp:include page="/include/footer.jsp" />
 </body>
 </html>
 

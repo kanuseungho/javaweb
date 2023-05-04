@@ -17,10 +17,10 @@ public class Test4Controller extends HttpServlet{
 		int su2 = request.getParameter("su2")==null?0:Integer.parseInt(request.getParameter("su2"));
 		
 		Test4Service t4 = new Test4Service(su1, su2);
-		int hap=t4.test4Clac();
+		int hap=t4.test4Calc();
 		
 		Test4Service2 t4_2 = new Test4Service2(su1, su2);
-		int cha = t4_2.test4Clac();
+		int cha = t4_2.test4Calc();
 		
 		request.setAttribute("hap", hap);
 		request.setAttribute("cha", cha);

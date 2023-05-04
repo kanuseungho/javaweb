@@ -14,7 +14,6 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/database/DeleteOk")
 public class DeleteOk extends HttpServlet {
 	@Override
-	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		

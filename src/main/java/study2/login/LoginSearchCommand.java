@@ -18,13 +18,13 @@ public class LoginSearchCommand implements LoginInterface {
 		LoginDAO dao = new LoginDAO();
 		
 		LoginVO vo = dao.getMidCheck(mid);
-		if(vo.getMid()!=null) {
+		
+		if(vo.getMid() != null) {
 			request.setAttribute("msg", "NO");
 			request.setAttribute("url", request.getContextPath()+"/MemberSearch.re?mid="+mid);
-			request.setAttribute("vo", vo);
 		}
 		else {
-			request.setAttribute("msg", "검색한 회원이 존재하지 않습니다");
+			request.setAttribute("msg", "검색한 회원이 존재하지 않습니다.");
 			request.setAttribute("url", request.getContextPath()+"/MemberMain.re");
 		}
 	}

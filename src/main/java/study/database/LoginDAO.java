@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class LoginDAO {
-	
 	private Connection conn = null;
 	private PreparedStatement pstmt = null;
 	private ResultSet rs = null;
@@ -33,7 +32,6 @@ public class LoginDAO {
 			System.out.println("Database 연동 실패~~~");
 		}
 	}
-	
 	
 	// 사용한 객체의 반납(해제)
 	public void pstmtClose() {
@@ -234,22 +232,5 @@ public class LoginDAO {
 		}
 		return res;
 	}
-	public String getPassword(String mid, String name) {
-		String pw ="";
-		try {
-			sql="select pwd from login where mid=? and name=?";
-			pstmt=conn.prepareStatement(sql);
-			pstmt.setString(1, mid);
-			pstmt.setString(2, name);
-			rs=pstmt.executeQuery();
-			
-		} catch (Exception e) {
-			
-		}
-		
-		
-		
-		return "";
-	}
-	
+
 }

@@ -14,7 +14,6 @@ public class UpdateCommand implements LoginInterface {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		HttpSession session = request.getSession();
 		
 		String mid = (String) session.getAttribute("sMid");
